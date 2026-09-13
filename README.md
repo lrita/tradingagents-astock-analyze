@@ -21,8 +21,8 @@
 | 项 | 值 |
 |----|----|
 | LLM provider | `deepseek` |
-| deep 档模型（研究经理 / 组合经理） | `deepseek-v4-pro` |
-| quick 档模型（7 分析师 + 辩手） | `deepseek-v4-pro` |
+| deep 档模型（研究经理 / 组合经理） | `deepseek-flash` |
+| quick 档模型（7 分析师 + 辩手） | `deepseek-flash` |
 | API 源 | `https://api.deepseek.com`（DeepSeek 官方） |
 | 输出语言 | 中文 |
 | `max_debate_rounds` | 3 |
@@ -81,7 +81,7 @@ uv run python scripts/analyze_stock.py 600519 2026-08-14                    # 3.
 ```
 
 参数：`<股票代码> <交易日 YYYY-MM-DD> [--out 路径.json]`。可选 `--out` 把 JSON 报告
-另存到指定路径（stdout 仍输出同一份 JSON）。模型（`deepseek-v4-pro`）、辩论轮次（各 3 轮）、
+另存到指定路径（stdout 仍输出同一份 JSON）。模型（`deepseek-flash`）、辩论轮次（各 3 轮）、
 中文输出、DeepSeek 官方源均已在脚本内固定，无需传参。
 
 ## 输出契约
@@ -99,8 +99,8 @@ uv run python scripts/analyze_stock.py 600519 2026-08-14                    # 3.
   "ticker": "600519",
   "trade_date": "2026-08-14",
   "provider": "deepseek",
-  "deep_think_llm": "deepseek-v4-pro",
-  "quick_think_llm": "deepseek-v4-pro",
+  "deep_think_llm": "deepseek-flash",
+  "quick_think_llm": "deepseek-flash",
   "max_debate_rounds": 3,
   "max_risk_discuss_rounds": 3,
   "generated_at": "2026-08-14T15:04:05",

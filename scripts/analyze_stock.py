@@ -55,8 +55,8 @@ def _build_config() -> dict:
     config = DEFAULT_CONFIG.copy()
     # ── LLM：DeepSeek 官方源 ──────────────────────────────────────────────
     config["llm_provider"] = "deepseek"
-    config["deep_think_llm"] = "deepseek-v4-pro"   # 深度节点：研究经理 / 组合经理
-    config["quick_think_llm"] = "deepseek-v4-pro"  # 快速节点：7 分析师 + 多空/风险辩手
+    config["deep_think_llm"] = "deepseek-flash"   # 深度节点：研究经理 / 组合经理
+    config["quick_think_llm"] = "deepseek-flash"  # 快速节点：7 分析师 + 多空/风险辩手
     config["backend_url"] = "https://api.deepseek.com"  # deepseek 官方 API 源
     # ── A 股数据源（全部直连 HTTP，零额外 API Key）──────────────────────
     config["data_vendors"] = {
@@ -142,7 +142,7 @@ def main() -> None:
     config = _build_config()
 
     _eprint(f"[{datetime.now():%H:%M:%S}] 开始分析 {args.ticker} @ {args.trade_date}")
-    _eprint("  provider=deepseek  model=deepseek-v4-pro  debate=3  risk=3")
+    _eprint("  provider=deepseek  model=deepseek-flash  debate=3  risk=3")
 
     # 3) 运行分析。debug=False → 不产生流式日志，stdout 保持纯净。
     result: dict = {

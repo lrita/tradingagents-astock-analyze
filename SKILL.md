@@ -28,7 +28,7 @@ uv run --with "tradingagents-astock @ git+https://github.com/simonlin1212/tradin
   python scripts/analyze_stock.py 600519 2026-08-14
 ```
 
-参数：`<股票代码> <交易日 YYYY-MM-DD> [--out 路径.json]`。模型（`deepseek-v4-pro`）、
+参数：`<股票代码> <交易日 YYYY-MM-DD> [--out 路径.json]`。模型（`deepseek-flash`）、
 辩论轮次（各 3 轮）、中文输出、DeepSeek 官方源均已在脚本内固定，无需传参。
 预装环境（反复调用更快）、可编辑安装、Gemini/httpx 冲突避坑见 `README.md`。
 
